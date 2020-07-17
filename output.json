@@ -1,0 +1,75 @@
+{
+  "$id": "http://ns.sensei.adobe.com/schemas/content/v2/annotation",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "annotation_output": {
+      "type": "object",
+      "properties": {
+        "annotations": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "object"
+                },
+                "features": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "feature_name": {
+                          "type": "string"
+                        },
+                        "feature_value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "feature_name",
+                        "feature_value"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "feature_name": {
+                          "type": "string"
+                        },
+                        "feature_value": {
+                          "type": "array",
+                          "items": {}
+                        }
+                      },
+                      "required": [
+                        "feature_name",
+                        "feature_value"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "location",
+                "features"
+              ]
+            }
+          ]
+        },
+        "response_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "annotations",
+        "response_type"
+      ]
+    }
+  },
+  "required": [
+    "annotation_output"
+  ]
+}
