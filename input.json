@@ -1,0 +1,26 @@
+{
+  
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "input_text": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "query",
+        "user_id"
+      ]
+    }
+  },
+  "required": [
+    "input_text"
+  ]
+}
