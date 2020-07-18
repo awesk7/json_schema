@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+      {
+          "output_name1": {
+              "text": "hello"
+          },
+          "output_name2": {
+              "user_id": "8"
+          }
+      }
+  ],
+  "required": [
+      "output_name1",
+      "output_name2"
+  ],
+  "additionalProperties": true,
+  "properties": {
+      "output_name1": {
+          "$id": "#/properties/output_name1",
+          "type": "object",
+          "title": "The output_name1 schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "text": "hello"
+              }
+          ],
+          "required": [
+              "text"
+          ],
+          "additionalProperties": true,
+          "properties": {
+              "text": {
+                  "$id": "#/properties/output_name1/properties/text",
+                  "type": "string",
+                  "title": "The text schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "hello"
+                  ]
+              }
+          }
+      },
+      "output_name2": {
+          "$id": "#/properties/output_name2",
+          "type": "object",
+          "title": "The output_name2 schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "user_id": "8"
+              }
+          ],
+          "required": [
+              "user_id"
+          ],
+          "additionalProperties": true,
+          "properties": {
+              "user_id": {
+                  "$id": "#/properties/output_name2/properties/user_id",
+                  "type": "string",
+                  "title": "The user_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "8"
+                  ]
+              }
+          }
+      }
+  }
+}
