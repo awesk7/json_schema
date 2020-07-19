@@ -1,0 +1,40 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "query",
+    "user_id"
+  ],
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/adobe-xdm-schemas/content-processing/master/content/content_schema.json"
+    },
+    {
+      "properties": {
+        "query": {
+          "$id": "#/properties/query",
+          "type": "string",
+          "title": "The Dominant_color Schema",
+          "default": "",
+          "examples": [
+            "how to share pdf"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "color_model": {
+          "$id": "#/properties/user_id",
+          "type": "string",
+          "title": "The Color_model Schema",
+          "default": "",
+          "examples": [
+            "1"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  ]
+}
